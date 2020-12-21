@@ -66,7 +66,7 @@ function App() {
     <View style={{ flex: 1 }}>
       <View style={styles.header}>
         <Text styles={styles.headerName}>toDo</Text>
-        <Text styles={styles.headerNumber}>{toDoList.length}</Text>
+        <Text styles={styles.headerNumber}>{toDoList.filter(todo => todo.isDone === true).length}</Text>
       </View>
       <View style={styles.list}>
         <FlatList
