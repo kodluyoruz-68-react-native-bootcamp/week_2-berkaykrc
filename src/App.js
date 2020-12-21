@@ -52,13 +52,16 @@ function App() {
 
   const isDone = (id) => itemClicked ? handleClicked(false) : handleClicked(true);
   const addToDoList = () => {
-    handletoDoList(toDoList => [...toDoList,
-    {
-      id: Math.floor(Math.random() * 100),
-      title: toDoText,
-      isDone: null,
-    }]
-    )
+    if (!toDoText==="") {
+      handletoDoList(toDoList => [...toDoList,
+      {
+        id: Math.floor(Math.random() * 100),
+        title: toDoText,
+        isDone: false,
+      }]
+      )
+    }
+
     storeItem('')
   }
 
