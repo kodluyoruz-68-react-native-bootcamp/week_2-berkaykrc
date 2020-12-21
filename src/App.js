@@ -52,7 +52,7 @@ function App() {
 
   const isDone = (id) => itemClicked ? handleClicked(false) : handleClicked(true);
   const addToDoList = () => {
-    if (!toDoText==="") {
+    if (!toDoText === "") {
       handletoDoList(toDoList => [...toDoList,
       {
         id: Math.floor(Math.random() * 100),
